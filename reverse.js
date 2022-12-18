@@ -5,5 +5,11 @@ function reverse(str){
     return reverse(str.slice(1))+ str[0]
 }
 
-let res=reverse("akhilesh")
+function isPaildrome(str){
+   let nstr= reverse(str)
+   if(str===nstr) return true
+   return false
+}
+
+let res=isPaildrome("aka")
 console.log(res)
