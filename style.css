@@ -1,3 +1,118 @@
-h1 {
-    color: red;
+.box{
+    background-color: red;
+    transition: all 1s ease-in-out;
+    }
+    .box:hover{
+        background-color: aquamarine;
+        transform:   scale(1.5)  ;
+    }
+.flex{
+    display: flex;
+    
+}
+.spinner{
+    border: 10px solid black;
+    border-top: 10px solid green ;
+    border-bottom: 10px solid red;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center; 
+    animation: spinner 3s  0s infinite ease-in-out;
+  
+}
+
+@keyframes spinner{
+    0%{
+        transform:  rotate(0);
+    }
+    25%{
+        transform: rotate(1turn);
+       border-left-color:aqua;
+
+    }
+    50%{
+        transform: rotate(2turn);
+        border-color:darkgoldenrod;
+    }
+    100%{
+        transform:   rotate(3turn);
+    }
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    position:absolute
+}
+.sun{
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    border-radius: 50%;
+    position:absolute;
+    top:calc(50% - 150px/2);
+    left: calc(50% - 150px/2);
+   
+}
+.earth{
+    --moveX:300px;
+    width:80px;
+    height:80px;
+    background-color: gray;
+    border-radius:50%;
+    position:absolute;
+    top:calc(50% - 80px/2);
+    left: calc(50% - 80px/2);
+    transform: translate(200px);
+   animation: solarSystem 5s infinite linear;
+}
+.mars{
+
+--moveX:100px;   
+ width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    position:absolute;
+    top:calc(50% - 30px/2);
+    left: calc(50% - 30px/2);
+    transform: translate(120px);
+   animation: solarSystem 2s infinite linear;
+}
+.venus
+{
+    --moveX:220px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position:absolute;
+    top:calc(50% - 50px/2);
+    left: calc(50% - 50px/2);
+    transform: translate(200px);
+    animation: solarSystem 3s infinite linear;
+}
+.murcery
+{
+    --moveX:160px;
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    border-radius: 50%;
+    position:absolute;
+    top:calc(50% - 70px/2);
+    left: calc(50% - 70px/2);
+    transform: translate(150px);
+   animation: solarSystem 4s infinite linear;
+}
+
+@keyframes solarSystem{
+    from{
+        transform: rotate(0deg) translate(var( --moveX ));
+    }
+    to{
+        transform: rotate(360deg) translate(var( --moveX ));
+    }
+
 }
